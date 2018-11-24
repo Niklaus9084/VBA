@@ -1,5 +1,5 @@
 Option Explicit
-'设置单元格格式
+'设置格式
 Function set_format(ByRef selection As Range)
 Dim rng As Range
     With selection
@@ -50,6 +50,7 @@ Dim rng As Range
         .Font.Size = 9
     End With
 End Function
+'生成表头
 Function gen_header()
     Static arr_header() As String
     Static str_header As String
@@ -62,6 +63,7 @@ Function gen_header()
     Call set_format(Sheet1.Range("a1:p1"))
     Sheet1.Range("a1:p1").Interior.ColorIndex = 15
 End Function
+'生成日历
 Function gen_cal()
     Dim firstday As Date
     Dim i, j, firstweek As Integer
@@ -98,6 +100,7 @@ Function gen_cal()
         Next i
     End With
 End Function
+'生成数据行
 Function gen_data(ByVal add_date As Date)
     Dim datalist As New Collection
     Dim i, k As Integer
