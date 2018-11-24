@@ -157,6 +157,7 @@ Function gen_data(ByVal add_date As Date)
         Call set_format(Sheet1.Cells(k, i))
     Next i
 End Function
+'获取数据行最后一行的行号
 Function get_lastrow()
     Dim k As Integer
     k = 2
