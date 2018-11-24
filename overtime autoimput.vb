@@ -1,4 +1,5 @@
 Option Explicit
+'设置单元格格式
 Function set_format(ByRef selection As Range)
 Dim rng As Range
     With selection
